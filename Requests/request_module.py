@@ -31,3 +31,10 @@ response = requests.get("https://httpbin.org/get" ,cookies= mycookies)
 
 print(response.text)"""
 
+url = "https://xkcd.com/comics/python.png"
+
+response = requests.get(url= url)
+
+with open("extracted_image.png" , "wb") as file :
+
+    file.write(response.content)
